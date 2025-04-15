@@ -1,0 +1,177 @@
+{
+  "version": 1,
+  "author": "Priscila Lima Rocha",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-pi-pico-w",
+      "id": "pico",
+      "top": -22.95,
+      "left": 61.45,
+      "rotate": 180,
+      "attrs": { "builder": "pico-sdk" }
+    },
+    {
+      "type": "wokwi-membrane-keypad",
+      "id": "keypad1",
+      "top": -69.2,
+      "left": -359.2,
+      "attrs": {}
+    },
+    { "type": "wokwi-led", "id": "led1", "top": -80.4, "left": -25, "attrs": { "color": "red" } },
+    {
+      "type": "wokwi-led",
+      "id": "led2",
+      "top": -80.4,
+      "left": 23,
+      "attrs": { "color": "limegreen" }
+    },
+    {
+      "type": "wokwi-7segment",
+      "id": "sevseg1",
+      "top": 235.38,
+      "left": 254.68,
+      "attrs": { "color": "#00ff00", "common": "cathode" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 71.15,
+      "left": 240,
+      "attrs": { "value": "330" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": 51.95,
+      "left": 230.4,
+      "attrs": { "value": "330" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r3",
+      "top": 32.75,
+      "left": 230.4,
+      "attrs": { "value": "330" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r4",
+      "top": 13.55,
+      "left": 230.4,
+      "attrs": { "value": "330" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r5",
+      "top": -5.65,
+      "left": 230.4,
+      "attrs": { "value": "330" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r6",
+      "top": -24.85,
+      "left": 230.4,
+      "attrs": { "value": "330" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r7",
+      "top": -44.05,
+      "left": 230.4,
+      "attrs": { "value": "330" }
+    },
+    {
+      "type": "wokwi-7segment",
+      "id": "sevseg2",
+      "top": 235.38,
+      "left": 341.08,
+      "attrs": { "color": "#00ff00", "common": "cathode" }
+    },
+    { "type": "wokwi-junction", "id": "j1", "top": 168, "left": 283.2, "attrs": {} },
+    {
+      "type": "wokwi-7segment",
+      "id": "sevseg3",
+      "top": 235.38,
+      "left": 417.88,
+      "attrs": { "color": "#00ff00", "common": "cathode" }
+    },
+    {
+      "type": "wokwi-7segment",
+      "id": "sevseg4",
+      "top": 235.38,
+      "left": 494.68,
+      "attrs": { "color": "#00ff00", "common": "cathode" }
+    },
+    { "type": "wokwi-junction", "id": "j2", "top": 158.4, "left": 283.2, "attrs": {} },
+    { "type": "wokwi-junction", "id": "j3", "top": 139.2, "left": 283.2, "attrs": {} },
+    { "type": "wokwi-junction", "id": "j4", "top": 129.6, "left": 283.2, "attrs": {} },
+    { "type": "wokwi-junction", "id": "j5", "top": 120, "left": 283.2, "attrs": {} },
+    { "type": "wokwi-junction", "id": "j6", "top": 110.4, "left": 264, "attrs": {} },
+    { "type": "wokwi-junction", "id": "j7", "top": 91.2, "left": 254.4, "attrs": {} }
+  ],
+  "connections": [
+    [ "pico:GP0", "$serialMonitor:RX", "", [] ],
+    [ "pico:GP1", "$serialMonitor:TX", "", [] ],
+    [ "keypad1:R1", "pico:GP2", "green", [ "v105.6", "h307.2", "v-355.2", "h-19.2" ] ],
+    [ "keypad1:R2", "pico:GP3", "green", [ "v96", "h287.6", "v-336" ] ],
+    [ "keypad1:R3", "pico:GP4", "green", [ "v86.4", "h268.5", "v-316.8" ] ],
+    [ "keypad1:R4", "pico:GP5", "green", [ "v76.8", "h249.4", "v-288" ] ],
+    [ "keypad1:C1", "pico:GP6", "green", [ "v67.2", "h230.3", "v-268.8" ] ],
+    [ "keypad1:C2", "pico:GP7", "green", [ "v57.6", "h211.2", "v-240" ] ],
+    [ "keypad1:C3", "pico:GP8", "green", [ "v48", "h191.85", "v-220.8" ] ],
+    [ "keypad1:C4", "pico:GP9", "green", [ "v38.4", "h172.5", "v-201.6" ] ],
+    [ "led1:C", "pico:GND.8", "black", [ "v19.2", "h0.4", "v33.2" ] ],
+    [ "led2:C", "pico:GND.8", "black", [ "v19.2", "h0.4", "v33.2" ] ],
+    [ "led1:A", "pico:GP27", "red", [ "v28.8", "h432", "v144" ] ],
+    [ "led2:A", "pico:GP28", "limegreen", [ "v9.6", "h403.2", "v153.6" ] ],
+    [ "r1:1", "pico:GP16", "gold", [ "h-19.2", "v-95.46" ] ],
+    [ "r2:1", "pico:GP17", "blue", [ "h-19.2", "v-66.66" ] ],
+    [ "r3:1", "pico:GP18", "#8f4814", [ "h-67.2", "v-28.26" ] ],
+    [ "r4:1", "pico:GP19", "magenta", [ "v0" ] ],
+    [ "sevseg2:A", "j1:J", "limegreen", [ "v-66.36", "h-28.8" ] ],
+    [ "sevseg1:A", "j1:J", "limegreen", [ "v0" ] ],
+    [ "j1:J", "r1:2", "limegreen", [ "h19.2", "v-96" ] ],
+    [ "sevseg3:A", "j1:J", "limegreen", [ "v0" ] ],
+    [ "sevseg4:A", "j1:J", "limegreen", [ "v0" ] ],
+    [ "sevseg2:B", "j2:J", "limegreen", [ "v0" ] ],
+    [ "sevseg3:B", "j2:J", "limegreen", [ "v-75.96", "h-182.4" ] ],
+    [ "sevseg4:B", "j2:J", "limegreen", [ "v0" ] ],
+    [ "j2:J", "r2:2", "limegreen", [ "h28.8", "v-105.6" ] ],
+    [ "sevseg1:C", "j3:J", "limegreen", [ "v19.2", "h19.2", "v-172.8" ] ],
+    [ "sevseg2:C", "j3:J", "limegreen", [ "v19.2", "h19.2", "v-172.8" ] ],
+    [ "sevseg3:C", "j3:J", "limegreen", [ "v19.2", "h19.2", "v-172.8" ] ],
+    [ "sevseg4:C", "j3:J", "limegreen", [ "v19.2", "h19.2", "v-172.8" ] ],
+    [ "j3:J", "r3:2", "limegreen", [ "h38.4", "v-105.6" ] ],
+    [ "j4:J", "r4:2", "limegreen", [ "h48", "v-115.2" ] ],
+    [ "sevseg1:E", "j5:J", "limegreen", [ "v38.4", "h67.2", "v-220.8" ] ],
+    [ "sevseg2:E", "j5:J", "limegreen", [ "v38.4", "h67.2", "v-220.8" ] ],
+    [ "sevseg3:E", "j5:J", "limegreen", [ "v38.4", "h67.2", "v-220.8" ] ],
+    [ "sevseg4:E", "j5:J", "limegreen", [ "v38.4", "h76.8", "v-220.8" ] ],
+    [ "j5:J", "r5:2", "limegreen", [ "h57.6", "v-124.8" ] ],
+    [ "sevseg1:F", "j6:J", "limegreen", [ "v0" ] ],
+    [ "sevseg2:F", "j6:J", "limegreen", [ "v0" ] ],
+    [ "sevseg3:F", "j6:J", "limegreen", [ "v0" ] ],
+    [ "sevseg4:F", "j6:J", "limegreen", [ "v0" ] ],
+    [ "j6:J", "r6:2", "limegreen", [ "h86.4", "v-134.4" ] ],
+    [ "sevseg1:G", "j7:J", "limegreen", [ "v0" ] ],
+    [ "sevseg2:G", "j7:J", "limegreen", [ "v0" ] ],
+    [ "sevseg3:G", "j7:J", "limegreen", [ "v0" ] ],
+    [ "sevseg4:G", "j7:J", "limegreen", [ "v0" ] ],
+    [ "j7:J", "r7:2", "limegreen", [ "h105.6", "v-134.4" ] ],
+    [ "sevseg1:B", "j2:J", "limegreen", [ "v0" ] ],
+    [ "r7:1", "pico:GP22", "cyan", [ "h-57.6", "v96.5" ] ],
+    [ "r6:1", "pico:GP21", "orange", [ "h-38.4", "v48.5" ] ],
+    [ "r5:1", "pico:GP20", "white", [ "h-28.8", "v29.3" ] ],
+    [ "sevseg1:COM.1", "pico:GP10", "black", [ "h0", "v105.6", "h-326.4", "v-288" ] ],
+    [ "sevseg2:COM.2", "pico:GP11", "limegreen", [ "h0", "v-37.56", "h-403.2", "v-67.2" ] ],
+    [ "sevseg3:COM.1", "pico:GP12", "orange", [ "h0", "v115.2", "h-499.2", "v-278.4" ] ],
+    [ "sevseg4:COM.2", "pico:GP13", "limegreen", [ "h0", "v-27.96", "h-547.2", "v-57.6" ] ],
+    [ "sevseg1:D", "j4:J", "limegreen", [ "v28.8", "h48", "v-201.6" ] ],
+    [ "sevseg2:D", "j4:J", "limegreen", [ "v28.8", "h48", "v-201.6" ] ],
+    [ "sevseg3:D", "j4:J", "limegreen", [ "v28.8", "h48", "v-201.6" ] ],
+    [ "sevseg4:D", "j4:J", "limegreen", [ "v28.8", "h48", "v-201.6" ] ]
+  ],
+  "dependencies": {}
+}
