@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "author": "Patryck Lopes",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-pi-pico", "id": "pico", "top": -79.95, "left": 205.2, "attrs": {} },
+    {
+      "type": "wokwi-membrane-keypad",
+      "id": "keypad1",
+      "top": -88.4,
+      "left": -224.8,
+      "attrs": {}
+    },
+    { "type": "wokwi-led", "id": "led1", "top": 198, "left": 147.8, "attrs": { "color": "red" } },
+    {
+      "type": "wokwi-led",
+      "id": "led2",
+      "top": 198,
+      "left": 205.4,
+      "attrs": { "color": "limegreen" }
+    },
+    { "type": "wokwi-led", "id": "led3", "top": 198, "left": 272.6, "attrs": { "color": "blue" } }
+  ],
+  "connections": [
+    [ "pico:GP0", "$serialMonitor:RX", "", [] ],
+    [ "pico:GP1", "$serialMonitor:TX", "", [] ],
+    [ "led1:C", "pico:GND.8", "green", [ "v48", "h230.8", "v-336" ] ],
+    [ "led2:C", "pico:GND.8", "green", [ "v38.4", "h154", "v-326.4", "h-86.4" ] ],
+    [ "led3:C", "pico:GND.8", "green", [ "v28.8", "h67.6", "v-316.8" ] ],
+    [ "led1:A", "pico:GP10", "green", [ "v28.8", "h9.6", "v-211.2" ] ],
+    [ "led2:A", "pico:GP11", "green", [ "v19.2", "h19.2", "v-115.2", "h-57.6", "v-76.8" ] ],
+    [ "led3:A", "pico:GP12", "green", [ "v19.2", "h28.8", "v-124.8", "h-124.8", "v-57.6" ] ],
+    [ "keypad1:R1", "pico:GP2", "green", [ "v19.2", "h182.4", "v-307.2", "h9.6" ] ],
+    [ "keypad1:R2", "pico:GP3", "green", [ "v28.8", "h182", "v-307.2" ] ],
+    [ "keypad1:R3", "pico:GP4", "green", [ "v38.4", "h182.1", "v-307.2" ] ],
+    [ "keypad1:R4", "pico:GP5", "green", [ "v48", "h182.2", "v-307.2" ] ],
+    [ "keypad1:C1", "pico:GP6", "green", [ "v57.6", "h182.3", "v-297.6" ] ],
+    [ "keypad1:C2", "pico:GP7", "green", [ "v67.2", "h182.4", "v-297.6" ] ],
+    [ "keypad1:C3", "pico:GP8", "green", [ "v76.8", "h182.25", "v-297.6" ] ],
+    [ "keypad1:C4", "pico:GP9", "green", [ "v86.4", "h182.1", "v-297.6" ] ]
+  ],
+  "dependencies": {}
+}
