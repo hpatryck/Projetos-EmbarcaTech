@@ -23,4 +23,21 @@ Para melhor visualização, seguem os links de cada projeto:
   https://wokwi.com/projects/422458759466369025
 
 - Tarefa 2:
+  - Questão 1: 
+    https://wokwi.com/projects/422460791272456193
+
+  - Questão 2:
+    https://wokwi.com/projects/422461614692045825
+    
+  - Questão 3:
+    https://wokwi.com/projects/422463048935588865
+    
+  - Questão 4:
+    https://wokwi.com/projects/422463764520685569
+    
+  - Questão 5:
+    https://wokwi.com/projects/422464707709765633
   
+  - Questão 6:
+    https://wokwi.com/projects/422464995229357057
+    
