@@ -15,3 +15,12 @@ Para melhor visualização, seguem os links de cada projeto:
 - Keypad_led e Keypad_with_leds:
   https://wokwi.com/projects/420654304389706753 |
   https://wokwi.com/projects/420656164031506433
+
+- Senha:
+  https://wokwi.com/projects/421888468636559361
+
+- Tarefa 1:
+  https://wokwi.com/projects/422458759466369025
+
+- Tarefa 2:
+  
