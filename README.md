@@ -9,11 +9,11 @@ Para melhor visualização, seguem os links de cada projeto:
   https://wokwi.com/projects/423911278708076545
 
 - Cofre e Cofre Simulator:
-  https://wokwi.com/projects/421539773341524993 |
+  https://wokwi.com/projects/421539773341524993
   https://wokwi.com/projects/421543280873925633
 
 - Keypad_led e Keypad_with_leds:
-  https://wokwi.com/projects/420654304389706753 |
+  https://wokwi.com/projects/420654304389706753
   https://wokwi.com/projects/420656164031506433
 
 - Senha:
