@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "author": "Patryck Lopes",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-pi-pico",
+      "id": "pico",
+      "top": 73.65,
+      "left": 13.2,
+      "attrs": { "builder": "pico-sdk" }
+    },
+    { "type": "wokwi-ds1307", "id": "rtc1", "top": -15, "left": 124.9, "attrs": {} },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": 131,
+      "left": -115.2,
+      "attrs": { "color": "green" }
+    }
+  ],
+  "connections": [
+    [ "pico:GP0", "$serialMonitor:RX", "", [] ],
+    [ "pico:GP1", "$serialMonitor:TX", "", [] ],
+    [ "rtc1:GND", "pico:GND.8", "black", [ "h-19.2", "v105.6" ] ],
+    [ "rtc1:5V", "pico:VBUS", "red", [ "h-28.8", "v-0.4" ] ],
+    [ "rtc1:SDA", "pico:GP8", "green", [ "h-144", "v162.9" ] ],
+    [ "rtc1:SCL", "pico:GP9", "green", [ "h-134.4", "v163" ] ],
+    [ "pico:GP5", "btn1:1.r", "green", [ "h-48", "v-9.6" ] ],
+    [ "pico:GND.2", "btn1:2.r", "black", [ "h-48", "v9.6" ] ]
+  ],
+  "dependencies": {}
+}
